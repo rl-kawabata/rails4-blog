@@ -1,2 +1,29 @@
-h1 Front#show
-p Find me in app/views/front/show.html.slim
+section.section.blog
+  .container
+    .columns.is-mobile
+      .column.is-8.is-offset-2
+        article.article.content
+          h1 = @article.title
+
+          p.has-text-right.has-text-muted = @article.created_at.strftime("%Y.%m.%d")
+
+          = markdown2html @article.body
+
+        .card.is-fullwidth
+          header.card-header
+            p.card-header-title
+              | About the author
+          .card-content
+            article.media
+              .media-left
+                figure.image.is-64x64
+                  = image_tag 'kawabata.png'
+              .media-content
+                .content
+                  p
+                    strong Kawabata Shingo
+                    small @rl-kawabata
+                    br/
+                    | What I like is Ruby and Fried chicken.
+                    br/
+                    | I look forward to working with you.
