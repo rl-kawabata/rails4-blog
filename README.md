@@ -1,5 +1,7 @@
 # Rails5 Blog
 
+![screen_shot01](readme/img/screen01.png "screen_shot01")
+
 Rails5のBlogアプリケーションです。  
 ポートフィリオ用に作成しました。  
 総工数は0.5人日程です。  
