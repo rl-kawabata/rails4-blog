@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   resources :articles
 
-  get '/' => 'articles#index', as: 'root'
+  get '/:article_id' => 'front#show', constraints: {post_id: /\d+/}, as: 'front_article'
+
+  # root
+  get '/' => 'front#index', as: 'root'
+
+  # 404
+  get '*path', controller: 'application', action: 'render_404'
 end

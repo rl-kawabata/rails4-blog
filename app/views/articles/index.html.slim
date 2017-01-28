@@ -17,7 +17,7 @@ table.table
       tr
         th 1
         td
-          = article.title
+          = link_to article.title, front_article_path(article_id: article.id), target: "_blank"
         td
           = link_to '編集', edit_article_path(article), class: 'button is-primary'
         td
