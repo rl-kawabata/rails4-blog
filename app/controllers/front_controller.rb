@@ -1,6 +1,6 @@
-class FrontController < ApplicationController
+class FrontController < FrontApplicationController
   def index
-    @articles = Article.all
+    @articles = Article.page(params[:page])
   end
 
   def show

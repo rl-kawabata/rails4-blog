@@ -18,6 +18,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'slim-rails'
 gem 'html2slim'
+gem 'kaminari'
+gem 'redcarpet'
 
 gem "font-awesome-rails"
 gem "bulma-rails", "~> 0.3.1"

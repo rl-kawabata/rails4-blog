@@ -1,2 +1,11 @@
-h1 Front#index
-p Find me in app/views/front/index.html.slim
+.container
+  - @articles.each do |article|
+    .column.article
+      p.article-timestamp
+        = article.created_at.strftime("%Y.%m.%d")
+      h2.article-title
+        = link_to article.title, front_article_path(article_id: article.id)
+      p.article-summary
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ornare malesuada dolor ut dictum. Pellentesque eget orci nisl. Vivamus sit amet ullamcorper elit. Donec mattis scelerisque dui sed convallis.
+
+  = paginate @articles
