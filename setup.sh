@@ -1,2 +1,2 @@
 #!/bin/sh
-bundle exec rake db:migrate db:seed
+bundle exec rake db:migrate:reset db:seed
