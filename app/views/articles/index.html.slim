@@ -4,24 +4,25 @@ h1.title
 table.table
   thead
     tr
-      th No
+      th ID
       th タイトル
       th[colspan="2"]
   tfoot
     tr
-      th No
+      th ID
       th タイトル
       th[colspan="2"]
   tbody
     - @articles.each do |article|
       tr
-        th 1
+        th
+          = article.id
         td
           = link_to article.title, front_article_path(article_id: article.id), target: "_blank"
         td
           = link_to '編集', edit_article_path(article), class: 'button is-primary'
         td
-          = link_to '削除', article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button'
+          = link_to '削除', article, method: :delete, class: 'button'
 
 
 = link_to '記事を追加', new_article_path, class: 'button is-primary'
