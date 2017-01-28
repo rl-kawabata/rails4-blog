@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   get '/' => 'front#index', as: 'root'
 
   # 404
-  get '*path', controller: 'application', action: 'render_404'
+  get '*path', controller: 'front_application', action: 'render_404'
 end

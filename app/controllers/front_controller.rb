@@ -4,5 +4,9 @@ class FrontController < FrontApplicationController
   end
 
   def show
+    @article = Article.find_by(id: params[:article_id])
+    if @article.blank?
+      return render_404
+    end
   end
 end
