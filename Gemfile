@@ -19,6 +19,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'slim-rails'
 gem 'html2slim'
 
+gem "font-awesome-rails"
+gem "bulma-rails", "~> 0.3.1"
 
 group :development, :test do
   gem 'byebug', platform: :mri

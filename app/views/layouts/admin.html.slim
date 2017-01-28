@@ -1,1 +1,47 @@
+doctype html
+html#admin
+  head
+    meta charset="utf-8" /
+    meta content="IE=edge" http-equiv="X-UA-Compatible" /
+    meta content="width=device-width, initial-scale=1" name="viewport" /
+    title Admin - Free Bulma template
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = csrf_meta_tags
 
+  body
+    .columns
+      aside.column.is-2.aside.hero.is-fullheight.is-hidden-mobile
+        div
+          .main
+            .title Main
+            = link_to articles_path, class: 'item active'
+              span.icon
+                i.fa.fa-book
+              span.name 記事
+
+      .column.is-10.admin-panel
+        nav#top.nav.has-shadow
+          .container
+            .nav-left
+              = link_to root_path, class: 'nav-item logo'
+                = image_tag 'logo.png'
+            span.nav-toggle
+              span
+              span
+              span
+            .nav-right.nav-menu.is-hidden-tablet
+              = link_to articles_path, class: 'nav-item active'
+                span.name 記事
+
+        section.section
+          = yield
+
+    footer.footer
+      .container
+        .has-text-centered
+          p
+            small Copyright &copy; 2016 Robo Lab Inc. All Rights Reserved.
+          p
+            a.icon href="https://github.com/rl-kawabata/rails5-blog"
+              i.fa.fa-github
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'

@@ -40,6 +40,8 @@ GEM
       tzinfo (~> 1.1)
     arel (7.1.4)
     builder (3.2.3)
+    bulma-rails (0.3.1)
+      sass (~> 3.2)
     byebug (9.0.6)
     coderay (1.1.1)
     coffee-rails (4.2.1)
@@ -54,6 +56,8 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.17)
+    font-awesome-rails (4.7.0.1)
+      railties (>= 3.2, < 5.1)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     hpricot (0.8.6)
@@ -184,8 +188,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bulma-rails (~> 0.3.1)
   byebug
   coffee-rails (~> 4.2)
+  font-awesome-rails
   html2slim
   jbuilder (~> 2.5)
   jquery-rails
