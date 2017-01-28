@@ -1,24 +1,29 @@
 # Rails5 Blog
 
-Rails5のBlogアプリケーションです。
+Rails5のBlogアプリケーションです。  
+ポートフィリオ用に作成しました。  
+総工数は0.5人日程です。  
+記事自体はMarkupで記述します。
 
-## Installation
+## 環境
 
-Add this line to your application's Gemfile:
+- Ruby 2.3.0
+- Rails 5.0.1
+- Bulma 0.3.1
+
+## 導入
 
 ```
-gem 'digi_moji'
+git clone git@github.com:rl-kawabata/rails5-blog.git
+cd ./rails5-blog
+bundle install -j4 --path vendor/bundle
+sh setup.sh
 ```
 
-And then execute:
+## 起動
 
-    $ bundle
+```
+bundle exec rails s -p 3000
+```
 
-
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/digi_moji/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+## 概要
