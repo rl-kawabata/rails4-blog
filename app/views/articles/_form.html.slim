@@ -8,11 +8,14 @@
         - article.errors.full_messages.each do |message|
           li
             = message
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :body
-    = f.text_area :body
-  .actions
-    = f.submit
+
+  = f.label :title, class: 'label'
+  p.control
+    = f.text_field :title, class: 'input', placeholder: '記事タイトルを入力して下さい'
+
+  = f.label :body, class: 'label'
+  p.control
+    = f.text_area :body, class: 'textarea', style: 'height:300px;', placeholder: '記事本文を入力して下さい'
+
+  p.control
+    = f.submit "保存", class: 'button is-primary'
