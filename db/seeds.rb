@@ -1,7 +1,42 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#-------------
+# Article
+#-------------
+50.times do |i|
+  Article.create(title: "記事#{i+1}", body: "**「自分でサービスを作りたいのですが、これからプログラミング始めるとしたらPHPとRubyどちらを選べばいいですか？」**
+
+こういう質問をよくYah◯◯知恵袋や、質問サイトでよく見かけます。
+
+これに対する回答は
+
+「何を作りたいかによります。」
+
+「好みの問題です。」
+
+「フレームワーク次第。」
+
+とかそんな回答が多かったりします。
+
+
+**正論！正論だけども！**
+
+そういうことを聞きたい訳じゃないのよ！
+
+初心者的にはどちらの言語を使うべきか、確信的なおすすめポイントを教えて頂戴よ！っていうのが今回のお話です。
+
+僕は普段はPHPとRuby案件をメインに取り扱っています。
+その上で、PHPとRubyどっちがおすすめか、僕が普段感じる観点でお話させていただきます。
+
+### エンジニアとしてつぶしがきく
+
+最近の転職市場やフリーランスエンジニアの求人では、PHPよりRubyの案件の方が多いように感じます。
+
+なので、Rubyの経験値は転職や就職の際に有利になるかと思います。
+
+### 書いてて楽しい
+
+## まとめ
+
+ただ周りのエンジニアでは**新たにRubyを学びたいPHPエンジニアはよく見かけるけど、新たにPHPを学びたいRubyエンジニアはあまり見ない**という印象を受けるので、僕がもし初学者でWebサービス開発のために新しく言語を学習するならRubyを選ぶだろうなと思います。
+
+PHP信者の人には怒られそうだけど、僕はRubyがおすすめです。")
+end
