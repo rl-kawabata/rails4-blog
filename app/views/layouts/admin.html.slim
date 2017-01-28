@@ -34,6 +34,10 @@ html#admin
                 span.name 記事
 
         section.section
+          - if notice
+            .notification.is-primary
+              = notice
+
           = yield
 
     footer.footer

@@ -1,27 +1,28 @@
-p#notice
-  = notice
+
 h1
   | Articles
-table
+
+table.table
   thead
     tr
-      th
-        | Title
-      th
-        | Body
-      th[colspan="3"]
+      th No
+      th タイトル
+      th[colspan="2"]
+  tfoot
+    tr
+      th No
+      th タイトル
+      th[colspan="2"]
   tbody
     - @articles.each do |article|
       tr
+        th 1
         td
           = article.title
         td
-          = article.body
+          = link_to '編集', edit_article_path(article), class: 'button is-primary'
         td
-          = link_to 'Show', article
-        td
-          = link_to 'Edit', edit_article_path(article)
-        td
-          = link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }
-br
-= link_to 'New Article', new_article_path
+          = link_to '削除', article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button'
+
+
+= link_to '記事を追加', new_article_path, class: 'button is-primary'
