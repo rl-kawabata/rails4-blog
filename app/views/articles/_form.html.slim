@@ -13,6 +13,10 @@
   p.control
     = f.text_field :title, class: 'input', placeholder: '記事タイトルを入力して下さい'
 
+  = f.label :description, class: 'label'
+  p.control
+    = f.text_field :description, class: 'input', placeholder: '説明文を入力して下さい'
+
   = f.label :body, class: 'label'
   p.control
     = f.text_area :body, class: 'textarea', style: 'height:300px;', placeholder: '記事本文を入力して下さい'

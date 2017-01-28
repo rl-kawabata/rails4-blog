@@ -6,6 +6,6 @@
       h2.article-title
         = link_to article.title, front_article_path(article_id: article.id)
       p.article-summary
-        = markdown2html(article.body)
+        = article.description
 
   = paginate @articles

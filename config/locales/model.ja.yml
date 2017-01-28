@@ -5,4 +5,5 @@ ja:
     attributes:
       article:
         title: タイトル
+        description: 説明文
         body: 本文
