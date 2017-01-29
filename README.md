@@ -27,5 +27,3 @@ sh setup.sh
 ```
 bundle exec rails s -p 3000
 ```
-
-## 概要
